@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vega-Lite Bar Chart</title>
+    <meta charset="utf-8" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+    <style media="screen">
+      /* Add space between Vega-Embed links  */
+      .vega-actions a {
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Japan </h1>
+    <!-- Container for the visualization -->
+    <div id="vis"></div>
+    <div id="vis2"></div>
+    <div id="vis3"></div>
+
+    <script>
+      // Assign the specification to a local variable vlSpec.
+//     var expectancy_healthcare_graph = {
+//       "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+//       "data": {"url": "data/japan_health_expectancy.csv"},
+//       "encoding": {
+//         "x": {"timeUnit": "year", "field": "date"},
+//         "tooltip": [
+//           {"timeUnit": "year", "field": "date"},
+//           {"field": "expectancy", "type": "quantitative", "title": "Life Expectancy"},
+//           {"field": "healthcare", "type": "quantitative", "title": "Healthcare Spending (US $)"}
+//         ]
+//       },
+//       "layer": [{
+//         "mark": {"type": "line", "point": true, "color": "purple"},
+//         "encoding": {
+//           "y": {"field": "expectancy", "type": "quantitative"}
+//         }
+//       }, {
+//         "mark": {"type": "line", "point": true, "color": "red"},
+//         "encoding": {
+//           "y": {"field": "healthcare", "type": "quantitative"}
+//         }
+//       }, {
+//         "mark": "rule",
+//         "selection": {
+//           "hover": {"type": "single", "on": "mouseover", "empty": "none"}
+//         },
+//         "encoding": {
+//           "color": {
+//             "condition":{
+//               "selection": {"not": "hover"}, "value": "transparent"
+//             }
+//           }
+//         }
+//       }],
+//     //   "config": {"axisY": {"minExtent": 30}}
+//     }
+      var healthcare_graph = {
+      "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+      "data": {"url": "data/japan_healthcare_spending.csv"},
+      "encoding": {
+        "x": {"timeUnit": "year", "field": "date"},
+        "tooltip": [
+          {"timeUnit": "year", "field": "date"},
+          {"field": "healthcare_spending", "type": "quantitative", "title": "Healthcare Spending (US $)"}
+        ]
+      },
+      "layer": [{
+        "mark": {"type": "line", "point": true, "color": "red"},
+        "encoding": {
+          "y": {"field": "healthcare_spending", "type": "quantitative"}
+        }
+      }, {
+        "mark": "rule",
+        "selection": {
+          "hover": {"type": "single", "on": "mouseover", "empty": "none"}
+        },
+        "encoding": {
+          "color": {
+            "condition":{
+              "selection": {"not": "hover"}, "value": "transparent"
+            }
+          }
+        }
+      }],
+    //   "config": {"axisY": {"minExtent": 30}}
+    }
+    var expectancy_graph = {
+      "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+      "data": {"url": "data/japan_life_expectency.csv"},
+      "encoding": {
+        "x": {"timeUnit": "year", "field": "date"},
+        "tooltip": [
+          {"timeUnit": "year", "field": "date"},
+          {"field": "life_expectancy", "type": "quantitative", "title": "Life Expectancy"}
+        ]
+      },
+      "layer": [{
+        "mark": {"type": "line", "point": true, "color": "red"},
+        "encoding": {
+          "y": {"field": "life_expectancy", "type": "quantitative"}
+        }
+      }, {
+        "mark": "rule",
+        "selection": {
+          "hover": {"type": "single", "on": "mouseover", "empty": "none"}
+        },
+        "encoding": {
+          "color": {
+            "condition":{
+              "selection": {"not": "hover"}, "value": "transparent"
+            }
+          }
+        }
+      }],
+    //   "config": {"axisY": {"minExtent": 30}}
+    }
+    var birth_death_graph = {
+      "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+      "data": {"url": "data/japan_birth_death.csv"},
+      "encoding": {
+        "x": {"timeUnit": "year", "field": "date"},
+        "tooltip": [
+          {"timeUnit": "year", "field": "date"},
+          {"field": "birth", "type": "quantitative", "title": "Birth rate per 1000 people"},
+          {"field": "death", "type": "quantitative", "title": "Death rate per 1000 people"}
+        ]
+      },
+      "layer": [{
+        "mark": {"type": "area", "point": true, "color": "purple"},
+        "encoding": {
+          "y": {"field": "birth", "type": "quantitative"}
+        }
+      }, {
+        "mark": {"type": "area", "point": true, "color": "red"},
+        "encoding": {
+          "y": {"field": "death", "type": "quantitative"}
+        }
+      }, {
+        "mark": "rule",
+        "selection": {
+          "hover": {"type": "single", "on": "mouseover", "empty": "none"}
+        },
+        "encoding": {
+          "color": {
+            "condition":{
+              "selection": {"not": "hover"}, "value": "transparent"
+            }
+          }
+        }
+      }],
+    //   "config": {"axisY": {"minExtent": 30}}
+    }
+//        var vlSpec = {
+//         $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
+//         "data": {"url": "data/jlh.csv"},
+//         "mark": {"type": "line","point": true},
+//         "encoding": {
+//           "y": {"field": "value", "type": "quantitative"},
+//           "x": {"field": "date", "type": "temporal"},
+// //             "axis": {
+// //               "title": "Year"
+// //             }
+// //           }
+//           "color": {"type": "nominal", "field": "category"}
+//         }
+//       };
+
+      // Embed the visualization in the container with id `vis`
+      vegaEmbed('#vis', healthcare_graph);
+      vegaEmbed('#vis2', expectancy_graph);
+      vegaEmbed('#vis3', birth_death_graph);
+      
+    </script>
+  </body>
+</html>
