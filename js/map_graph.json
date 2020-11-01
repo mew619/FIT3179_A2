@@ -1,0 +1,29 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "width": 600,
+    "height": 400,
+    "title": "Map showing the young to old ratio of top 5 economies in the world",
+    "projection": {"type": "equalEarth"},
+    "data": {
+        "url": "data/ne_110m_admin_0_countries.topojson",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}},
+    "transform": [{
+      "lookup": "properties.NAME",
+      "from": {
+        "data": {
+          "url": "data/young_old_ratio.csv"
+        },
+        "key": "adm0name",
+        "fields": ["ratio"]
+      }
+      }],
+    "mark": "geoshape",
+    "encoding": {
+      "color": {
+          "field": "ratio",
+          "scale": {"type": "threshold", "domain": [0.1, 0.5, 1.2, 1.5, 2.5, 3.7], "range": ["#a9a9a9", "#68bdb8", "#54a24c", "#ef8620", "#4e77a7", "#e55756"]},
+          "type": "quantitative",
+          "legend": null
+       }
+      }
+  }
