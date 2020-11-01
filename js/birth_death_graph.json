@@ -1,0 +1,41 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {"url": "data/japan_birth_death.csv"},
+    "width": 340,
+    "height": 160,
+    "title": "Area chart to compare the trends of births and deaths",
+    "encoding": {
+      "x": {"timeUnit": "year", "field": "date", "title": "Year"},
+      "tooltip": [
+        {"timeUnit": "year", "field": "date", "title": "Year"},
+        {"field": "birth", "type": "quantitative", "title": "Birth rate per 1000 people"},
+        {"field": "death", "type": "quantitative", "title": "Death rate per 1000 people"}
+      ]
+    },
+    "layer": [{
+      "mark": {"type": "area", "point": true, "color": "purple"},
+      "encoding": {
+        "y": {"field": "birth", "type": "quantitative", "title": "Birth"}
+      }
+    }, {
+      "mark": {"type": "area", "point": true, "color": "red"},
+      "encoding": {
+        "y": {"field": "death", "type": "quantitative", "title": "Death"}
+      }
+    }, {
+      "mark": "rule",
+      "selection": {
+        "hover": {"type": "single", "on": "mouseover", "empty": "none"}
+      },
+      "encoding": {
+        "color": {
+          "condition":{
+            "selection": {"not": "hover"}, "value": "transparent"
+          }
+        }
+      }
+    }],
+    "config":{
+        "axis": {"grid": false}
+    }
+  }
