@@ -1,0 +1,28 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": { "url": "data/population_by_age.json"},
+    "title": {"text": "Stacked bar chart to show the ages of different countries"},
+    "mark": "bar",
+    "encoding": {
+      "column": {
+        "field": "age", "type": "ordinal", "spacing": 10
+      },
+      "y": {
+        "aggregate": "sum", 
+        "field": "population",
+        "title": "population",
+        "axis": {"grid": false}
+      },
+      "x": {
+        "field": "country",
+        "axis": {"title": ""}
+      },
+      "color": {
+        "field": "country"
+      }
+    },
+    "config": {
+      "view": {"stroke": "transparent"},
+      "axis": {"domainWidth": 1}
+    }
+  }
