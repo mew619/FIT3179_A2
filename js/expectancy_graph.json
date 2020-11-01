@@ -1,0 +1,35 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {"url": "data/japan_life_expectency.csv"},
+    "width": 340,
+    "height": 160,
+    "title": "Line chart to show the trend of life expectancy",
+    "encoding": {
+      "x": {"timeUnit": "year", "field": "date", "title": "Year"},
+      "tooltip": [
+        {"timeUnit": "year", "field": "date", "title": "Year"},
+        {"field": "life_expectancy", "type": "quantitative", "title": "Life Expectancy"}
+      ]
+    },
+    "layer": [{
+      "mark": {"type": "line", "point": true, "color": "red"},
+      "encoding": {
+        "y": {"field": "life_expectancy", "type": "quantitative", "title": "Life Expectency (Years)"}
+      }
+    }, {
+      "mark": "rule",
+      "selection": {
+        "hover": {"type": "single", "on": "mouseover", "empty": "none"}
+      },
+      "encoding": {
+        "color": {
+          "condition":{
+            "selection": {"not": "hover"}, "value": "transparent"
+          }
+        }
+      }
+    }],
+    "config":{
+        "axis": {"grid": false}
+    }
+  }
