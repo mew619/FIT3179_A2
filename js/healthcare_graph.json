@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-    "data": {"url": "data/japan_healthcare_spending.csv"},
+    "data": {"url": "https://raw.githubusercontent.com/mew619/FIT3179_A2/main/data/japan_healthcare_spending.csv"},
     "width": 340,
     "height": 160,
     "title": "Line chart to show the trend of healthcare spending",
