@@ -3,14 +3,15 @@
     "width": 75,
     "height": 165,
     "data": { "url": "https://raw.githubusercontent.com/mew619/FIT3179_A2/main/data/population_by_age.json"},
-    "title": {"text": "Bar chart to show the ages of different countries"},
+    "title": {"text": "Bar chart to show the ages of different countries",
+              "align": "center"},
     "mark": "bar",
     "encoding": {
       "column": {
         "field": "country", 
         "type": "nominal", 
         "spacing": 10,
-        "title": "Country"
+        "title": null
       },
       "y": {
         "aggregate": "sum", 
@@ -20,7 +21,7 @@
       },
       "x": {
         "field": "age",
-        "axis": {"title": "Age"}
+        "axis": {"title": null}
       },
       "color": {
         "field": "country",
