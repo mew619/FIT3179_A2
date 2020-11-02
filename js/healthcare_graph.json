@@ -5,7 +5,7 @@
     "height": 160,
     "title": "Line chart to show the trend of healthcare spending",
     "encoding": {
-      "x": {"timeUnit": "year", "field": "date", "title": "Year"},
+      "x": {"timeUnit": "year", "field": "date", "title": null},
       "tooltip": [
         {"timeUnit": "year", "field": "date", "title": "Year"},
         {"field": "healthcare_spending", "type": "quantitative", "title": "Healthcare Spending (US $)"}
