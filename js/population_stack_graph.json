@@ -5,17 +5,20 @@
     "mark": "bar",
     "encoding": {
       "column": {
-        "field": "age", "type": "ordinal", "spacing": 10
+        "field": "country", 
+        "type": "ordinal", 
+        "spacing": 10,
+        "title": "Country"
       },
       "y": {
         "aggregate": "sum", 
         "field": "population",
-        "title": "population",
+        "title": "Population",
         "axis": {"grid": false}
       },
       "x": {
-        "field": "country",
-        "axis": {"title": ""}
+        "field": "age",
+        "axis": {"title": "Age"}
       },
       "color": {
         "field": "country"
