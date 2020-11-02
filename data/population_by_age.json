@@ -1,10 +1,10 @@
 [{"country":"USA","age":19,"population":82050},
-{"country":"USA","age":79,"population":75709},
+{"country":"USA","age":"60+","population":75709},
 {"country":"China","age":19,"population":337269},
-{"country":"China","age":79,"population":249766},
+{"country":"China","age":"60+","population":249766},
 {"country":"Japan","age":19,"population":21442},
-{"country":"Japan","age":79,"population":43402},
+{"country":"Japan","age":"60+","population":43402},
 {"country":"India","age":19,"population":487059},
-{"country":"India","age":79,"population":139600},
+{"country":"India","age":"60+","population":139600},
 {"country":"Brazil","age":19,"population":60233},
-{"country":"Brazil","age":79,"population":29848}]
+{"country":"Brazil","age":"60+","population":29848}]
