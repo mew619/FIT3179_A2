@@ -6,7 +6,7 @@
     "encoding": {
       "column": {
         "field": "country", 
-        "type": "ordinal", 
+        "type": "nominal", 
         "spacing": 10,
         "title": "Country"
       },
@@ -21,7 +21,11 @@
         "axis": {"title": "Age"}
       },
       "color": {
-        "field": "country"
+        "field": "country",
+        "scale": {
+          "domain": ["Brazil", "China", "India", "Japan", "USA"],
+          "range": ["#f0e442", "#d55e00", "#cc79a7", "#009e73", "#0072b2"]
+        }
       }
     },
     "config": {
