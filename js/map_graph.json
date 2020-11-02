@@ -8,7 +8,7 @@
         "url": "https://raw.githubusercontent.com/mew619/FIT3179_A2/main/data/ne_110m_admin_0_countries.topojson",
         "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}},
     "transform": [{
-      "lookup": "properties.NAME",
+      "lookup": "properties.ADMIN",
       "from": {
         "data": {
           "url": "https://raw.githubusercontent.com/mew619/FIT3179_A2/main/data/young_old_ratio.csv"
