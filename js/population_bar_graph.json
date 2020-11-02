@@ -1,10 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-    "width": 75,
-    "height": 165,
+    "width": 60,
+    "height": 155,
     "data": { "url": "https://raw.githubusercontent.com/mew619/FIT3179_A2/main/data/population_by_age.json"},
     "title": {"text": "Bar chart to show the ages of different countries",
-              "align": "center"},
+              "align": "left"},
     "mark": "bar",
     "encoding": {
       "column": {
@@ -27,8 +27,8 @@
         "field": "country",
         "scale": {
           "domain": ["Brazil", "China", "India", "Japan", "USA"],
-          "range": ["#f0e442", "#d55e00", "#cc79a7", "#009e73", "#0072b2"]
-        }
+          "range": ["#f0e442", "#d55e00", "#cc79a7", "#009e73", "#0072b2"]},
+        "legend": null
       }
     },
     "config": {
