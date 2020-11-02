@@ -13,12 +13,12 @@
       ]
     },
     "layer": [{
-      "mark": {"type": "area", "point": true, "color": "purple"},
+      "mark": {"type": "area", "point": true, "color": "red"},
       "encoding": {
         "y": {"field": "birth", "type": "quantitative", "title": "Birth"}
       }
     }, {
-      "mark": {"type": "area", "point": true, "color": "red"},
+      "mark": {"type": "area", "point": true, "color": "purple"},
       "encoding": {
         "y": {"field": "death", "type": "quantitative", "title": "Death"}
       }
