@@ -12,7 +12,7 @@
       ]
     },
     "layer": [{
-      "mark": {"type": "line", "point": true, "color": "orange"},
+      "mark": {"type": "line", "point": true, "color": "darkcyan"},
       "encoding": {
         "y": {"field": "life_expectancy", "type": "quantitative", "title": "Life Expectency (Years)"}
       }

@@ -12,7 +12,7 @@
       ]
     },
     "layer": [{
-      "mark": {"type": "line", "point": true, "color": "orange"},
+      "mark": {"type": "line", "point": true, "color": "darkcyan"},
       "encoding": {
         "y": {"field": "healthcare_spending", "type": "quantitative", "title": "Healthcare Spending (US$)"}
       }
