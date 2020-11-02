@@ -13,7 +13,7 @@
         "data": {
           "url": "https://raw.githubusercontent.com/mew619/FIT3179_A2/main/data/young_old_ratio.csv"
         },
-        "key": "adm0name",
+        "key": "name",
         "fields": ["ratio"]
       }
       }],
@@ -21,7 +21,9 @@
     "encoding": {
       "color": {
           "field": "ratio",
-          "scale": {"type": "threshold", "domain": [0.1, 0.5, 1.2, 1.5, 2.5, 3.7], "range": ["#a9a9a9", "#68bdb8", "#54a24c", "#ef8620", "#4e77a7", "#e55756"]},
+          "scale": {"type": "threshold", 
+                    "domain": [0.1, 0.5, 1.2, 1.5, 2.5, 3.7], 
+                    "range": ["#a9a9a9", "#009e73", "#0072b2", "#d55e00", "#f0e442", "#cc79a7"]},
           "type": "quantitative",
           "legend": null
        }
