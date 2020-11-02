@@ -22,6 +22,9 @@
         "field": "age",
         "axis": {"title": null}
       },
+      "tooltip": [
+        {"field": "country", "title": "Country"},
+        {"field": "population","title": "Population"}],
       "color": {
         "field": "country",
         "scale": {
