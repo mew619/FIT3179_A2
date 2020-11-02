@@ -79,6 +79,33 @@
       </div>
       
       <div class="pure-g">
+        <div class="pure-u-1-1">
+          <div id="vis1"></div>
+        </div>
+      </div>
+      <div class="pure-g">
+        <div class="pure-u-1-1">
+          <div id="vis2"></div>
+        </div>
+      </div>
+      <div class="pure-g">
+        <div class="pure-u-1-1">
+          <div id="vis3"></div>
+        </div>
+      </div>
+      <div class="pure-g">
+        <div class="pure-u-1-1">
+          <div id="vis4"></div>
+        </div>
+      </div>
+
+      <div class="pure-g">
+        <div class="pure-u-1-1">
+          <div id="vis5"></div>
+        </div>
+      </div>
+
+      <div class="pure-g">
         <div class="pure-u-1-1 small-font">
           <p>This visualisation is created by <a href="https://github.com/mew619" target="_blank">Muhammad Eesa Wazir</a>. The datasource are <a href="#"" target="_blank">some data repository online</href>.</p>
         </div>
@@ -92,7 +119,7 @@
       var population_stack_graph = "https://raw.githubusercontent.com/mew619/FIT3179_A2/main/js/population_stack_graph.json";
       var map_graph = "https://raw.githubusercontent.com/mew619/FIT3179_A2/main/js/map_graph.json";
       // Embed the visualization in the container with id `vis`
-      vegaEmbed('#vis', healthcare_graph, {"actions": false}).then(function(result) {
+      vegaEmbed('#vis1', healthcare_graph, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
       }).catch(console.error);
       vegaEmbed('#vis2', expectancy_graph, {"actions": false}).then(function(result) {
