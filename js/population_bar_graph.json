@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-    "width": 400,
-    "height": 300,
+    "width": 200,
+    "height": 150,
     "data": { "url": "https://raw.githubusercontent.com/mew619/FIT3179_A2/main/data/population_by_age.json"},
     "title": {"text": "Bar chart to show the ages of different countries"},
     "mark": "bar",
