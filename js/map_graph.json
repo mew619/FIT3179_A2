@@ -11,7 +11,7 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "data/young_old_ratio.csv"
+          "url": "https://raw.githubusercontent.com/mew619/FIT3179_A2/main/data/young_old_ratio.csv"
         },
         "key": "adm0name",
         "fields": ["ratio"]
