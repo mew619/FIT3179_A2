@@ -3,8 +3,7 @@
     "width": 60,
     "height": 155,
     "data": { "url": "https://raw.githubusercontent.com/mew619/FIT3179_A2/main/data/population_by_age.json"},
-    "title": {"text": "Bar chart to show the ages of different countries",
-              "align": "left"},
+    "title": {"text": "Bar chart to show the ages of different countries"},
     "mark": "bar",
     "encoding": {
       "column": {
